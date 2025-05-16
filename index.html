@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador Compra de Cartera - Agile Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador de Compra de Cartera Hipotecaria</h1>
+    <h2>Agile Home - Broker Financiero Multibanco</h2>
+  </header>
+
+  <section class="container">
+    <form id="simuladorForm">
+      <h3>🏦 Condiciones Actuales</h3>
+
+      <label>Banco actual:
+        <select name="bancoActual" required>
+          <option value="" disabled selected>Selecciona un banco</option>
+          <option>Banco de Bogotá</option>
+          <option>Bancolombia</option>
+          <option>Davivienda</option>
+          <option>BBVA</option>
+          <option>Caja Social</option>
+          <option>Banco de Occidente</option>
+          <option>Itau</option>
+          <option>Scotiabank Colpatria</option>
+          <option>AV Villas</option>
+        </select>
+      </label>
+
+      <label>Valor del desembolso inicial: <input type="number" name="desembolso" required></label>
+      <label>Valor de la deuda actual: <input type="number" name="deudaActual" required></label>
+      <label>Plazo inicial (años): <input type="number" name="plazoInicial" required></label>
+      <label>Plazo restante (años): <input type="number" name="plazoFaltante" required></label>
+      <label>Cuota mensual (con seguros): <input type="number" name="cuotaActual" required></label>
+      <label>Seguros mensuales: <input type="number" name="segurosMensuales" required></label>
+      <label>Tasa de interés actual (% EA): <input type="number" step="0.01" name="tasaActual" required></label>
+
+      <h3>🏦 Oferta de Compra de Cartera</h3>
+
+      <label>Nuevo banco:
+        <select name="bancoNuevo" required>
+          <option value="" disabled selected>Selecciona un banco</option>
+          <option>BBVA</option>
+          <option>Banco de Occidente</option>
+          <option>Caja Social</option>
+          <option>Itau</option>
+          <option>Banco de Bogotá</option>
+        </select>
+      </label>
+
+      <label>Valor del nuevo crédito: <input type="number" name="nuevoCredito" required></label>
+      <label>Nuevo plazo (años): <input type="number" name="nuevoPlazo" required></label>
+      <label>Nueva tasa de interés (% EA): <input type="number" step="0.01" name="nuevaTasa" required></label>
+      <label>Seguros mensuales (editable): <input type="number" name="nuevosSeguros"></label>
+
+      <button type="submit">Simular</button>
+    </form>
+
+    <section id="resultado" class="resultado"></section>
+  </section>
+
+  <footer>
+    <p>© 2025 Agile Home - Broker Financiero Multibanco</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
